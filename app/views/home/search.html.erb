@@ -9,11 +9,13 @@
 <%- end %>
 </div>
 
+<small>Keyword: <%= params[:keyword] %></small>
+
 <ul>
     <%- for article in @article do %>
     <li>
         <strong><%= link_to article.title, read_path(article_id: article.id) %></strong>
-        
+
         <small>
         Oleh <%= article.user.full_name %>
         pada <%= article.created_at.to_s(:short) %>
