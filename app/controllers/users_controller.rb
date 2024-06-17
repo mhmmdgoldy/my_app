@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-  http_basic_authenticate_with name: 'user', password: 'secret'
 
   # GET /users or /users.json
   def index

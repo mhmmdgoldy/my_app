@@ -2,8 +2,8 @@
 <p><%= @article.description %></p>
 
 <small>
-Oleh <%= @article.user.full_name %>    
-pada <%= @article.created_at.to_s(:short) %>            
+Oleh <%= @article.user.full_name %>
+pada <%= @article.created_at.to_s(:short) %>
 </small>
 
 <div>
@@ -13,7 +13,6 @@ pada <%= @article.created_at.to_s(:short) %>
     <%= text_area_tag 'comment', '' %>
     <br/>
     <%= submit_tag 'kirim' %>
-    
 <%- end %>
 </div>
 
@@ -23,7 +22,7 @@ pada <%= @article.created_at.to_s(:short) %>
     <li>
         <span><%= comment.comment %></span>
         <small>
-        Pada <%= comment.created_at.to_s(:short) %>            
+        Pada <%= comment.created_at.to_s(:short) %>
         </small>
     </li>
     <%- end %>

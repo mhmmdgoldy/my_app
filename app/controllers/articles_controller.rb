@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
-  http_basic_authenticate_with name: 'user', password: 'secret'
 
   # GET /articles or /articles.json
   def index
@@ -23,7 +22,6 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-    @article.user_id = User.last.id
 
     respond_to do |format|
       if @article.save
